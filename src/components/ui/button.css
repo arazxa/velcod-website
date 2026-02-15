@@ -55,3 +55,25 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+@media (max-width: 48rem) {
+  .ui-button {
+    min-height: 2.75rem;
+    touch-action: manipulation;
+  }
+
+  .ui-button--md {
+    font-size: var(--text-base);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-button {
+    transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .ui-button:hover,
+  .ui-button:active {
+    transform: none;
+  }
+}

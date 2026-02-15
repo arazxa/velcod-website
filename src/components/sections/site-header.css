@@ -26,3 +26,73 @@
   align-items: center;
   gap: var(--space-2);
 }
+
+.site-header__menu-toggle {
+  display: none;
+}
+
+@media (max-width: 48rem) {
+  .site-header {
+    top: 0;
+    min-height: 4rem;
+  }
+
+  .site-header__inner {
+    min-height: 4.25rem;
+  }
+
+  .site-header__menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0;
+    border: 1px solid var(--color-neutral-300);
+    border-radius: var(--radius-pill);
+    background: var(--color-neutral-0);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .site-header__menu-toggle span {
+    width: 1rem;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: var(--color-neutral-800);
+  }
+
+  .site-header__nav {
+    position: absolute;
+    top: calc(100% + var(--space-2));
+    left: var(--space-4);
+    right: var(--space-4);
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    border: 1px solid var(--color-neutral-100);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--color-neutral-0) 96%, transparent);
+    box-shadow: var(--elevation-md);
+    transform: translate3d(0, -0.5rem, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-medium), opacity var(--transition-medium);
+    will-change: transform, opacity;
+  }
+
+  .site-header__nav--open {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .site-header__nav .ui-nav-link,
+  .site-header__nav .ui-button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

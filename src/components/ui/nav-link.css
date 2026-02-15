@@ -22,3 +22,26 @@
   color: var(--color-brand-600);
   background: var(--color-brand-100);
 }
+
+@media (max-width: 48rem) {
+  .ui-nav-link {
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-base);
+    text-align: center;
+    touch-action: manipulation;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-nav-link {
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .ui-nav-link:hover,
+  .ui-nav-link:active {
+    transform: none;
+  }
+}
