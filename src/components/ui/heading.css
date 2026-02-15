@@ -31,3 +31,22 @@
   font-size: var(--text-lg);
   max-width: 58ch;
 }
+
+@media (max-width: 48rem) {
+  .ui-heading {
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+
+  .ui-heading__title {
+    font-size: clamp(1.75rem, 8vw, var(--text-4xl));
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .ui-heading__subtitle {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    max-width: 100%;
+  }
+}

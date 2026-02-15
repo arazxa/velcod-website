@@ -81,11 +81,16 @@ body,
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-neutral-800);
   background: linear-gradient(180deg, var(--color-neutral-50) 0%, #fff 45%);
   line-height: 1.5;
+  overflow-x: clip;
 }
 
 :focus-visible {
@@ -97,5 +102,36 @@ body {
 @media (max-width: 64rem) {
   :root {
     --container-padding: clamp(var(--space-4), 5vw, var(--space-6));
+  }
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --text-lg: 1.0625rem;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
   }
 }

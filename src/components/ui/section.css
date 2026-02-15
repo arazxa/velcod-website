@@ -13,3 +13,9 @@
 .ui-section--brand {
   background: radial-gradient(circle at top left, var(--color-brand-100), transparent 45%);
 }
+
+@media (max-width: 48rem) {
+  .ui-section {
+    padding-block: clamp(var(--space-8), 11vw, var(--space-12));
+  }
+}

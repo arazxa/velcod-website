@@ -1,3 +1,9 @@
 .features-section__cards {
   margin-top: var(--space-8);
 }
+
+@media (max-width: 48rem) {
+  .features-section__cards {
+    margin-top: var(--space-6);
+  }
+}

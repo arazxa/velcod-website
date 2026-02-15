@@ -25,8 +25,18 @@
   color: var(--color-neutral-600);
 }
 
-@media (max-width: 47.99rem) {
+@media (max-width: 48rem) {
   .hero-section__layout {
     grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .hero-section__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section__actions .ui-button {
+    width: 100%;
   }
 }
