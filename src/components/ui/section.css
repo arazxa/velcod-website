@@ -1,0 +1,15 @@
+.ui-section {
+  padding-block: clamp(var(--space-12), 10vw, var(--space-16));
+}
+
+.ui-section--default {
+  background: transparent;
+}
+
+.ui-section--muted {
+  background: var(--color-neutral-0);
+}
+
+.ui-section--brand {
+  background: radial-gradient(circle at top left, var(--color-brand-100), transparent 45%);
+}
