@@ -1,0 +1,30 @@
+.ui-card {
+  background: var(--color-neutral-0);
+  border: 1px solid var(--color-neutral-100);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--elevation-sm);
+  padding: var(--space-6);
+  height: 100%;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+}
+
+.ui-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--elevation-md);
+  border-color: var(--color-brand-100);
+}
+
+.ui-card:active {
+  transform: translateY(-1px);
+}
+
+.ui-card__title {
+  margin: 0 0 var(--space-3);
+  color: var(--color-neutral-900);
+  font-size: var(--text-xl);
+}
+
+.ui-card__content {
+  color: var(--color-neutral-600);
+  font-size: var(--text-base);
+}

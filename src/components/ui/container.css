@@ -1,0 +1,4 @@
+.ui-container {
+  width: min(100% - var(--container-padding) * 2, var(--container-max));
+  margin-inline: auto;
+}

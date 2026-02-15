@@ -1,0 +1,33 @@
+.ui-heading {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.ui-heading--center {
+  text-align: center;
+}
+
+.ui-heading__eyebrow {
+  margin: 0;
+  color: var(--color-brand-600);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ui-heading__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  line-height: 1.15;
+  color: var(--color-neutral-900);
+}
+
+.ui-heading__subtitle {
+  margin: 0;
+  color: var(--color-neutral-600);
+  font-size: var(--text-lg);
+  max-width: 58ch;
+}
